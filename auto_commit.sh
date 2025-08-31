@@ -14,6 +14,7 @@ echo "=============================2"
 cd "$REPO_PATH" || exit
 
 # Record script start time
+echo "=============================3"
 echo "=============================" >> "$LOG_FILE"
 echo "Script ran at $(date)" >> "$LOG_FILE"
 
