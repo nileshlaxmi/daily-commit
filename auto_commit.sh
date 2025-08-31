@@ -20,10 +20,12 @@ echo "Script ran at $(date)" >> "$LOG_FILE"
 echo "=============================4"
 # Add changes
 /usr/bin/git add . >> "$LOG_FILE" 2>&1
+echo "=============================5"
 
 # Commit changes
 COMMIT_MESSAGE="Automated commit $(date +"%Y-%m-%d %H:%M:%S")"
 /usr/bin/git commit -m "$COMMIT_MESSAGE" >> "$LOG_FILE" 2>&1
+echo "=============================6"
 
 # Check if commit succeeded
 if git diff-index --quiet HEAD --; then
@@ -35,3 +37,4 @@ else
     echo "Changes pushed to GitHub" >> "$LOG_FILE"
     osascript -e 'display notification "Changes pushed to GitHub" with title "Auto Commit"'
 fi
+echo "=============================7"
