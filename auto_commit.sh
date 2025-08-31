@@ -17,7 +17,7 @@ cd "$REPO_PATH" || exit
 echo "=============================3"
 echo "=============================" >> "$LOG_FILE"
 echo "Script ran at $(date)" >> "$LOG_FILE"
-
+echo "=============================4"
 # Add changes
 /usr/bin/git add . >> "$LOG_FILE" 2>&1
 
