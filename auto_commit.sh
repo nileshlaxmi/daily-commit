@@ -6,10 +6,10 @@
 
 # Full path to your repo
 REPO_PATH="/Users/nirvanaflame/Documents/Workspace/daily-commit"
-
+echo "=============================1"
 # Log file location
 LOG_FILE="$HOME/auto_commit.log"
-
+echo "=============================2"
 # Go to repo folder
 cd "$REPO_PATH" || exit
 
