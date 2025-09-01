@@ -6,11 +6,15 @@
 
 REPO_PATH="/Users/nirvanaflame/Documents/Workspace/daily-commit"
 LOG_FILE="$HOME/auto_commit.log"
+TIMESTAMP_FILE="$REPO_PATH/timestamp.js"
 
 cd "$REPO_PATH" || exit
 
 echo "=============================" >> "$LOG_FILE"
 echo "Script ran at $(date)" >> "$LOG_FILE"
+
+# Write timestamp to timestamp.js
+echo "console.log(\"$(date +'%Y-%m-%d %H:%M:%S')\")" > "$TIMESTAMP_FILE"
 
 # Add changes
 git add . >> "$LOG_FILE" 2>&1
