@@ -24,6 +24,7 @@ if [[ -n $(git status --porcelain) ]]; then
     COMMIT_MESSAGE="Automated commit $(date +"%Y-%m-%d %H:%M:%S")"
     git commit -m "$COMMIT_MESSAGE" >> "$LOG_FILE" 2>&1
     git push origin main >> "$LOG_FILE" 2>&1
+    echo "$(date +"%Y-%m-%d %H:%M:%S")"
     echo "Changes pushed to GitHub" >> "$LOG_FILE"
     osascript -e 'display notification "Changes pushed to GitHub" with title "Auto Commit"'
 else
